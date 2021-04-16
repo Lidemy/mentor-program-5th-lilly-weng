@@ -21,9 +21,13 @@ git push origin Week1
 在 master branch 的地方 Create request，如果有問題可以 leave a comment
 
 6. **若作業有想修改的:**  
-在 Local 改好後從第四步開始，可以在修改 message 做紀錄
+在 Local 改好後從第四步開始，可以在修改 message 做紀錄  
+如果已經關掉 terminal 了，需要 cd 至 mentor-program 那個資料夾，再commit
 
-7. **pull request 被 approved後:**  
+7. **上傳 pull requests的網址至 learning system:**  
+到 Master 的 branch 會看到 pull requests 的訊息，按下 pull request 的綠色按鈕後，將網址貼到 learning system 上傳作業那邊 
+
+8. **pull request 被 approved後:**  
 需要 pull down master branch，這樣 Local 和 GitHub才會同步
 ```
 git checkout master
