@@ -18,12 +18,12 @@ git commit -am 'hw1'
 git push origin Week1
 ```
 5. **至 GitHub 上 pull request:**  
-Create request，如果有問題可以 leave a comment
+在 master branch 的地方 Create request，如果有問題可以 leave a comment
 
 6. **若作業有想修改的:**  
 在 Local 改好後從第四步開始，可以在修改 message 做紀錄
 
-7. **pull request 被 approved後:**
+7. **pull request 被 approved後:**  
 需要 pull down master branch，這樣 Local 和 GitHub才會同步
 ```
 git checkout master
