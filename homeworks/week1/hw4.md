@@ -24,6 +24,10 @@ git commit -m "first_version"
 2. 把 GitHub Repo 的 HTTPS url 複製下來，告訴 git 要連去這個 Repo
 ```
 git remote add origin 'your_url'
+```  
+如果前面已經連過 Repo，遠端資料庫會被記住，可以查看遠端的資料庫是不是自己要放資料的地方
+```
+git remote -v
 ```
 3. 用 push的方式把笑話的資料夾推到 Repo 中的 master branch，這樣我們就可以在 GitHub 上看到所有的笑話版本了
 ```
