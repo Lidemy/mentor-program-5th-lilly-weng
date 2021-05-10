@@ -1,0 +1,34 @@
+{
+  "total_restaurants": "120",
+  "restaurants": [
+    {
+      "restaurant_id": "1",
+      "address": "ABC Road, Taipei City",
+      "name": "ABC food",
+      "hours": {
+        "open": 6,
+        "close": 24
+      },
+      "categories": ["Burgers", "Fast food"],
+      "city": "Taipei City",
+      "district": "Daan",
+      "price": "low",
+      "stars": "4.5"
+    },
+
+    {
+      "restaurant_id": "2",
+      "address": "DEF Road, New Taipei City",
+      "name": "DEF food",
+      "hours": {
+        "open": 11,
+        "close": 9
+      },
+      "categories": ["Italian"],
+      "city": "New Taipei City",
+      "district": "Banqiao",
+      "price": "medium",
+      "stars": "5"
+    }
+  ]
+}
