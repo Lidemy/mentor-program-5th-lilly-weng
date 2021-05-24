@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新拖延運動</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper_big">
+        <div class="bar">
+        </div>
+        <div class="wrapper_small">
+            <div class="header">
+                <h1>新拖延運動報名表單</h1>
+                <p>活動日期：2020/12/10 ~ 2020/12/11</p>
+                <p>活動地點：台北市大安區新生南路二段1號</p>
+                <p id="must">*必填</p>
+            </div>
+            <br>
+            <br>
+            <form class="information">
+                <label for="name">暱稱 <span class="star">*</span></label> <br><br>
+                <input type="text" id="name" name="name" placeholder="小明" required />
+                <br>
+                <br>
+                <br>
+                <label for="email">電子郵件 <span class="star">*</span></label> <br><br>
+                <input type="email" id="email" name="email" placeholder="abcdef@gmail.com" required />
+                <br>
+                <br>
+                <br>
+                <label for="phone">手機號碼 <span class="star">*</span></label> <br><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    placeholder="091-234-5678" required />
+                <br>
+                <br>
+                <br>
+                <p class="register">報名類型 <span class="star">*</span></p>
+                <br>
+                <div class="type">
+                    <label id="b"><input type="radio" id="bed" name="type" />躺在床上用想像力實作</label>
+                    <br>
+                    <br>
+                    <label id="f"><input type="radio" id="floor" name="type" />趴在地上滑手機找現成的</label>
+
+                </div>
+                <br>
+                <br>
+                <br>
+                <label for="name">怎麼知道這個活動的？ <span class="star">*</span></label> <br><br>
+                <input type="text" id="name" placeholder="朋友推薦" />
+                <br>
+                <br>
+                <br>
+                <label for="name">其他</label> <br>
+                <p class="advice">對活動的一些建議</p>
+                <input type="text" id="name" placeholder="您的回答" />
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="提交" id="submit">
+                <p class="advice">請勿透過表單送出您的密碼。</p>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>© 2020 © Copyright. All rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
