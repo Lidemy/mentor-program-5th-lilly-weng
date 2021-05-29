@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="outside">
+        <div class="inside">
+            <input type="button" id="click" value="click">
+        </div>
+    </div>
+    <script>
+        document.querySelector(".outside").addEventListener('click', function (e) {
+            console.log('outside')
+        })
+        document.querySelector(".inside").addEventListener('click', function (e) {
+            console.log('inside')
+        })
+        document.querySelector("#click").addEventListener('click', function (e) {
+            console.log('click')
+            e.stopImmediatePropagation()
+            //e.stopPropagation()
+        })
+        document.querySelector("#click").addEventListener('click', function (e) {
+            console.log('click2')
+        })
+    </script>
+</body>
+
+</html>
