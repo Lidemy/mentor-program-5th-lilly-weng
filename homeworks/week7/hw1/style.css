@@ -1,0 +1,98 @@
+body {
+  background-color: #e0e0e0;
+}
+.wrapper_big {
+  background-color: white;
+  width: 645px;
+  height: 1085px;
+  margin: 129px 636px 126px 639px;
+  box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.wrapper_small {
+  width: 565px;
+  height: 1085px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.bar {
+  height: 8px;
+  width: 100%;
+  background: #fad312;
+}
+
+#must {
+  color: #e74149;
+}
+
+.row {
+  color: red;
+}
+
+.star {
+  color: #e74149;
+}
+
+.name p {
+  font-size: 20px;
+}
+
+label[for="name"],
+label[for="email"],
+label[for="phone"] {
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 287px;
+  height: 23px;
+  border: solid 0.5px #d0d0d0;
+}
+
+.register {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+input[type="radio"] {
+  font-size: 14px;
+  width: 25px;
+  vertical-align: baseline;
+}
+
+.advice {
+  font-size: 14px;
+}
+
+#submit {
+  height: 40px;
+  width: 92px;
+  background-color: #fad312;
+  border-radius: 3px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.footer {
+  margin: 0px;
+  height: 60px;
+  background-color: black;
+}
+
+.footer p {
+  padding-top: 26px;
+  text-align: center;
+  color: #999999;
+}
+
+@media (max-width: 1820px) {
+  .wrapper_big {
+    background-color: white;
+    max-width: 645px;
+    height: 1085px;
+    margin: auto;
+    box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+  }
+}
