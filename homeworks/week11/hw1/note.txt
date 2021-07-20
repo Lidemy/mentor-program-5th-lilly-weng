@@ -1,0 +1,23 @@
+規劃產品
+index.php 觀看所有留言
+handle_add_php 新增留言
+
+資料結構
+
+前端頁面
+
+註冊功能
+register.php
+handle_register.php
+login.php
+handle_login.php
+logout.php
+
+密碼加密 --> 內建的 hash
+
+新增功能
+1.編輯暱稱
+
+2.編輯留言
+3.刪除留言
+4.分頁功能

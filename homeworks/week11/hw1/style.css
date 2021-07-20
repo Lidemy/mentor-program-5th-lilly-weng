@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f7f7f7;
+}
+
+.warning {
+  background: #ffc4c6;
+  color: #a20606;
+  padding: 10px;
+  text-align: center;
+}
+
+.board {
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 15px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+}
+
+.board__new-comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid #c2dffb;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.board__nickname {
+  margin-bottom: 10px;
+}
+
+.board__nickname input {
+  border: 1px solid #c2dffb;
+  padding: 5px;
+}
+
+.board__submit-btn {
+  border: 1px solid #c2dffb;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  color: #583c63;
+  font-size: 16px;
+  background: white;
+}
+
+.board__hr {
+  margin: 20px auto;
+  height: 2px;
+  background: #e8e8e8;
+  max-width: 95%;
+}
+
+.card {
+  margin: 20px 0;
+  min-height: 70px;
+  display: flex;
+}
+
+.card__avatar {
+  min-width: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #e4f0fb;
+}
+
+.card__body {
+  margin-left: 10px;
+}
+
+.card__content {
+  margin-top: 8px;
+  width: 100%;
+  word-break: break-word;
+  white-space: pre-line;
+}
+
+.card__author {
+  color: #5c9edc;
+  font-weight: bold;
+}
+
+.card__time {
+  color: #a0a0a0;
+  padding-left: 10px;
+}
+
+.error {
+  color: #a20606;
+}
+
+.board__btn {
+  border: 1px solid #c2dffb;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  color: black;
+  font-size: 16px;
+  background: white;
+}
+
+.auth_select {
+  margin-top: 15px;
+}
+
+.auth__submit-btn {
+  border: 1px solid #c2dffb;
+  padding: 2px 2px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  color: black;
+  font-size: 14px;
+  background: white;
+}
+
+.register__submit-btn {
+  border: 1px solid #c2dffb;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  color: black;
+  font-size: 16px;
+  background: white;
+}
+
+.hide {
+  display: none;
+}
+
+.board__nickname-form {
+  margin-top: 20px;
+}
+
+.page-info {
+  text-align: center;
+}
+
+.paginator {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.paginator a {
+  text-decoration: none;
+  color: #5c9edc;
+  border: 1px solid #5c9edc;
+  padding: 10px;
+  border-radius: 3px;
+  margin-right: 2px;
+}
