@@ -8,7 +8,7 @@
     exit;
   } 
 
-  $sql = "SELECT * FROM articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC";
+  $sql = "SELECT * FROM lilyweng_blog_articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC";
   $stmt = $conn->prepare($sql);
   $result = $stmt->execute();
   if (!$result) {

@@ -11,7 +11,7 @@
   $title = $_POST['title'];
   $content = $_POST['content'];
 
-  $sql = "INSERT INTO articles(username, title, content) VALUES(?, ?, ?)";
+  $sql = "INSERT INTO lilyweng_blog_articles(username, title, content) VALUES(?, ?, ?)";
   $stmt = $conn->prepare($sql);
   print_r($stmt);
   $stmt->bind_param('sss', $username, $title, $content);

@@ -16,8 +16,8 @@
         $row = $result->fetch_assoc();
         $username = $row['username'];
     
-        /* $sql = sprintf ("select * from lilyweng_users where username= '%s'", $username); */
-        $sql = sprintf ("select * from users where username= '%s'", $username);
+        //$sql = sprintf ("select * from lilyweng_users where username= '%s'", $username); 
+        $sql = sprintf ("select * from lilyweng_users where username= '%s'", $username);
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         return $row; //username, id, nickname
@@ -26,8 +26,8 @@
 
     function getUserFromUsername($username) {
         global $conn;  
-        /* $sql = sprintf ("select * from lilyweng_users where username= '%s'", $username); */
-        $sql = sprintf ("select * from users where username= '%s'", $username);
+        //$sql = sprintf ("select * from lilyweng_users where username= '%s'", $username); 
+        $sql = sprintf ("select * from lilyweng_users where username= '%s'", $username);
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         return $row; //username, id, nickname

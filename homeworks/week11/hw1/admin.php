@@ -12,7 +12,7 @@
     $username = $_SESSION['username'];
 
     //取得 users 資料
-    $sql = "SELECT * FROM users";
+    $sql = "SELECT * FROM lilyweng_users";
     $stmt = $conn->prepare($sql);
     $result = $stmt->execute();
     if(!$result) {

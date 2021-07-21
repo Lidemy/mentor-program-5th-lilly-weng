@@ -16,7 +16,7 @@
   $items_per_page = 5;
   $offset = ($page - 1) * $items_per_page;
 
-  $sql = "SELECT * FROM articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC LIMIT ? OFFSET ?";
+  $sql = "SELECT * FROM lilyweng_blog_articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC LIMIT ? OFFSET ?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('ii',$items_per_page, $offset);
   $result = $stmt->execute();
@@ -79,7 +79,7 @@
         </article>
         <?php } ?>
         <?php
-        $stmt = $conn->prepare("SELECT count(id) AS count FROM articles WHERE is_deleted IS NULL");
+        $stmt = $conn->prepare("SELECT count(id) AS count FROM lilyweng_blog_articles WHERE is_deleted IS NULL");
         $result = $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();

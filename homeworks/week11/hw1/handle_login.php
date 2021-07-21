@@ -12,8 +12,8 @@ if (empty($username) || empty($password)) {
     die('資料不齊全');
 }
 
-/* $sql = sprintf("SELECT * FROM lilyweng_users WHERE username='%s' AND password='%s'",$username, $password); */
-$sql = "SELECT * FROM users WHERE username=?";
+// $sql = sprintf("SELECT * FROM lilyweng_users WHERE username='%s' AND password='%s'",$username, $password); 
+$sql = "SELECT * FROM lilyweng_users WHERE username=?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('s', $username); 
 $result = $stmt->execute();

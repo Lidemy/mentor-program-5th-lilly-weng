@@ -12,7 +12,7 @@ if (empty($_GET['id'])) {
 }
 
 
-$sql = "update comments set is_deleted=1 where id=? and username=?" ;
+$sql = "update lilyweng_comments set is_deleted=1 where id=? and username=?" ;
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('is', $id, $username); //一個 s 表示一個字串的意思 i is integer
 $result = $stmt->execute();

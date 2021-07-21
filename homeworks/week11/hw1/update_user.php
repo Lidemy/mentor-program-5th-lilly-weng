@@ -12,7 +12,7 @@ if (empty($nickname)) {
     
 }
 
-$sql = "update users set nickname=? where username=?" ;
+$sql = "update lilyweng_users set nickname=? where username=?" ;
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('ss', $nickname, $username); //一個 s 表示一個字串的意思
 $result = $stmt->execute();

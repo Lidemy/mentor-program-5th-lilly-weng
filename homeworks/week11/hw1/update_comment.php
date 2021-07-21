@@ -15,7 +15,7 @@
 
     /* $result = $conn->query("SELECT * FROM lilyweng_comments ORDER BY id DESC"); */
     /* 抓取原本的留言 */
-    $stmt = $conn->prepare('select * from comments where id = ?');
+    $stmt = $conn->prepare('select * from lilyweng_comments where id = ?');
     $stmt ->bind_param("i", $id);
     
     $result = $stmt->execute();

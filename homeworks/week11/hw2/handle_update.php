@@ -16,7 +16,7 @@
   $created_at = date('Y-m-d h:i:s', time());  
 
 
-  $sql = "UPDATE articles SET title=?, content=?, created_at=? WHERE id=? AND username=?";
+  $sql = "UPDATE lilyweng_blog_articles SET title=?, content=?, created_at=? WHERE id=? AND username=?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('sssis', $title, $content, $created_at, $id, $username);
   

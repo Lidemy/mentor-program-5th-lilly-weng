@@ -10,7 +10,7 @@ session_start();
 
   $id = $_GET['id'];
 
-  $sql = "SELECT * FROM articles WHERE id=?";
+  $sql = "SELECT * FROM lilyweng_blog_articles WHERE id=?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('i', $id);
 
@@ -29,7 +29,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YO 部落格</title>
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

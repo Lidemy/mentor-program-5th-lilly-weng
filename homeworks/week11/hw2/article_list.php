@@ -2,7 +2,7 @@
   require_once('conn.php');
   require_once('utils.php');
 
-  $sql = "SELECT * FROM articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC";
+  $sql = "SELECT * FROM lilyweng_blog_articles AS a WHERE a.is_deleted IS NULL  ORDER BY id DESC";
   $stmt = $conn->prepare($sql);
   $result = $stmt->execute();
   if (!$result) {
@@ -17,7 +17,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>部落格</title>
-  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="normalize.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>

@@ -26,8 +26,8 @@ $row = $user_result->fetch_assoc(); */
 
 
 
-/* $sql = sprintf("INSERT INTO lilyweng_comments(nickname, content) VALUES('%s', '%s')", $nickname, $content); */
-$sql = "INSERT INTO comments(username, content) VALUES(?, ?)";
+// $sql = sprintf("INSERT INTO lilyweng_comments(nickname, content) VALUES('%s', '%s')", $nickname, $content); 
+$sql = "INSERT INTO lilyweng_comments(username, content) VALUES(?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('ss', $username, $content); //一個 s 表示一個字串的意思
 $result = $stmt->execute();

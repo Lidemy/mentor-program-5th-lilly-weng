@@ -20,15 +20,25 @@
     $items_per_page = 5;
     $offset = ($page - 1) * $items_per_page;
 
-    $stmt = $conn->prepare('
-    select comments.id, comments.username, users.nickname, 
-    comments.content, comments.created_at 
-    from comments left join users  
-    on comments.username = users.username 
-    where comments.is_deleted != 1  
-    order by comments.id desc 
-    limit ? offset ?');
-    
+    // $stmt = $conn->prepare('
+    // select comments.id, comments.username, users.nickname, 
+    // comments.content, comments.created_at 
+    // from comments left join users  
+    // on comments.username = users.username 
+    // where comments.is_deleted != 1  
+    // order by comments.id desc 
+    // limit ? offset ?');
+    $stmt = $conn->prepare(
+    "SELECT " .
+      "c.id AS id, c.content AS content, c.created_at AS created_at, " .
+      "u.nickname AS nickname, u.username AS username " . 
+    "FROM lilyweng_comments AS c " .
+    "LEFT JOIN lilyweng_users AS u ON c.username = u.username " .
+    "WHERE c.is_deleted != '1' " .
+    "ORDER BY c.id DESC " .
+    "LIMIT ? OFFSET ?" 
+  );
+
     $stmt->bind_param('ii', $items_per_page, $offset);
     $result = $stmt->execute();
     
@@ -65,7 +75,7 @@
             <span><?php if(!empty($authority) && $authority === '2'){?>
             <a class="board__btn" href="admin.php">Admin page</a>
             </span><?php } ?>
-            <form class=" hide board__nickname-form board__new-comment-form" method="POST" action="update_user.php">
+            <form class="hide board__nickname-form board__new-comment-form" method="POST" action="update_user.php">
                 <div class=" board__nickname">
                     <span>New nickname:</span>
                     <input type="text" name="nickname" />
@@ -135,7 +145,8 @@
         </section>
         <div class="board__hr"></div>
         <?php
-            $stmt = $conn->prepare('select count(id) as count from comments where is_deleted = 0');
+            // $stmt = $conn->prepare('select count(id) as count from comments where is_deleted = 0');
+            $stmt = $conn->prepare('select count(id) as count from lilyweng_comments where is_deleted = 0');
             $result = $stmt->execute();
             $result = $stmt->get_result();
             $row = $result->fetch_assoc();

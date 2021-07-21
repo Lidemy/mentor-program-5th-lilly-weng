@@ -12,8 +12,8 @@ if (empty($nickname) || empty($username) || empty($password)) {
     die('資料不齊全');
 }
 
-/* $sql = sprintf("INSERT INTO lilyweng_users(nickname, username, password) VALUES('%s', '%s', '%s')", $nickname, $username, $password); */
-$sql = "INSERT INTO users(nickname, username, password) VALUES(?, ?, ?)";
+// $sql = sprintf("INSERT INTO lilyweng_users(nickname, username, password) VALUES('%s', '%s', '%s')", $nickname, $username, $password); 
+$sql = "INSERT INTO lilyweng_users(nickname, username, password) VALUES(?, ?, ?)";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('sss', $nickname, $username, $password); //一個 s 表示一個字串的意思
 $result = $stmt->execute();

@@ -10,7 +10,7 @@
   $id = $_GET['id'];
   $username = $_SESSION['username'];
 
-  $sql = "UPDATE articles SET is_deleted=1 WHERE id=? AND username=?";
+  $sql = "UPDATE lilyweng_blog_articles SET is_deleted=1 WHERE id=? AND username=?";
   $stmt = $conn->prepare($sql);
   $stmt->bind_param('is', $id, $username);
 

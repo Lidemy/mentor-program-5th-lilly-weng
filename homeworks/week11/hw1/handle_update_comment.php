@@ -12,7 +12,7 @@ if (empty($_POST['content'])) {
     die('資料不齊全');
 }
 
-$sql = "update comments set content=? where id=? and username=?" ;
+$sql = "update lilyweng_comments set content=? where id=? and username=?" ;
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('sis', $content, $id, $username); //一個 s 表示一個字串的意思 i is integer
 $result = $stmt->execute();
