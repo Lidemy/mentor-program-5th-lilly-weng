@@ -1,7 +1,6 @@
-從這個 for 循環來看，一開始會印出 i: 1 - 4，而每一次循環的時候都會有一個 setTimeout，因此我們也可以得知，每一次循環都會有一個
-`(()=>{console.log(i)})` 被放進去 webapis 裡面，而且需要等待 i \* 1000 後才會被放到 task queue 裡面。那麼問題就是，這個 setTimeout 裡面的 i 是否跟 for loop 一樣呢?
+setTimeout 在最後才會被 JavaScript 處理，如果我們是以 var 宣告變數， var 的作用域是以 function 為基礎，因此當迴圈結束後，i 值已經變成 5，所以結果是為 5。
 
-就像第一題說的，這個 `(()=>{console.log(i)})` 是放在 webApis 裡面等 i \* 1000，而 setTimeout 裡面的 i 就是跟著 for loop 走，分別就是 0, 1, 2, 3, 4，而等這些時間跑完之後，`(()=>{console.log(i)})` 就會到 task queue 再到 stack，等它們到 stack 的時候，for loop 早就結束了，因此它們只會拿到 i = 5。輸出結果如以下所示。
+如果我們以 let 宣告變數， let 的作用域是以 block 來看，因此每次迴圈都可以看成單獨的一圈，i 值不會被覆蓋，最後輸出的結果就會是 0、1、2、3、4，就是跟 i 值一樣。
 
 ```
 i: 0
